@@ -55,7 +55,7 @@ class MatplotlibWidget(QWidget):
             self.canvas.draw() 
 
             fft_data = np.fft.fft(y)
-            phase = np.angle(fft_data)
+            phase = np.unwrap(np.angle(fft_data))
             freq = np.fft.fftfreq(len(y), d=(x[1] - x[0]))
 
             self.ax_phase.clear()
@@ -77,7 +77,7 @@ class MatplotlibWidget(QWidget):
             self.canvas.draw()
 
             fft_data = np.fft.fft(y)
-            phase = np.angle(fft_data)
+            phase = np.unwrap(np.angle(fft_data))
             freq = np.fft.fftfreq(len(y), d=(x[1] - x[0]))
 
             self.ax_phase.clear()
