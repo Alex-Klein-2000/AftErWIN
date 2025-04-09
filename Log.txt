@@ -1,0 +1,4 @@
+*03/04/2025*
+-Add "Materiau" and "Hardware" menues
+-Add "Ouvrir des documents" menu
+-Make waveforms movable and scalable
